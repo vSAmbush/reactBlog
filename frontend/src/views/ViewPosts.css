@@ -1,0 +1,15 @@
+.grid-view-posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+}
+
+.linear-view-posts {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: space-around;
+}

@@ -1,0 +1,56 @@
+.view-type-button {
+  $btn-size: 50px;
+  height: $btn-size;
+  width: $btn-size;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    background-color: #ddd;
+  }
+
+  &.active:before, &.active:after {
+    background-color: #28a4c9;
+  }
+
+  &.linear:before, &.linear:after {
+    width: 100%;
+    height: $btn-size / 4;
+    left: 0;
+  }
+
+  &.linear:before {
+    top: $btn-size / 5;
+  }
+
+  &.linear:after {
+    bottom: $btn-size / 5;
+  }
+
+  &.grid:before, &.grid:after {
+    width: $btn-size / 3;
+    height: $btn-size / 3;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &.grid:before {
+    left: 0;
+  }
+
+  &.grid:after {
+    right: 0;
+  }
+
+  &-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-around;
+  }
+}
